@@ -1,4 +1,4 @@
-NAME = MutantStack
+NAME = btc
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
