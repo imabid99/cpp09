@@ -1,17 +1,17 @@
 #include "BitcoinExchange.hpp"
 
-parse_data()
-{
+// parse_data()
+// {
     
-}
-bool is_valid(std::string key)
-{
-    std::istringstream s(key);
-  std::tm t = {};
-  if (!(ss >> std::get_time(&t, "%Y-%m-%d"))) {
-    return false;
-  }
-}
+// }
+// bool is_valid(std::string key)
+// {
+//     std::istringstream s(key);
+//   std::tm t = {};
+//   if (!(ss >> std::get_time(&t, "%Y-%m-%d"))) {
+//     return false;
+//   }
+// }
 int main(int argc, char* argv[]) {
     if (argc < 2) {
         std::cerr << "Error: could not open file." << std::endl;
@@ -25,7 +25,15 @@ int main(int argc, char* argv[]) {
         std::cerr << "Error: Failed to open." << filename << std::endl;
         return 1;
     }
-    parse_data();
+
+    std::ifstream data;
+
+    data.open("data.csv");
+    if (!data.is_open()) {
+    std::cerr << "Error: Failed to open." << std::endl;
+    return 1;
+    }
+    // parse_data();
     std::string line;
     std::string key;
     std::string value;
