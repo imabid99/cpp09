@@ -7,6 +7,10 @@
 #include <fstream>
 #include <map>
 #include <string>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <algorithm>
 
 class  BitcoinExchange
 {
