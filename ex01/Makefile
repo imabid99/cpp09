@@ -1,11 +1,12 @@
-NAME = MutantStack
+NAME = RPN
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INL = MutantStack.hpp
+INL = PRN.hpp
 
 SRCS = main.cpp \
+	   RPN.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

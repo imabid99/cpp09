@@ -3,9 +3,10 @@ NAME = btc
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INL = MutantStack.hpp
+INL = BitcoinExchange.hpp
 
 SRCS = main.cpp \
+	   BitcoinExchange.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -13,7 +14,7 @@ OBJS = $(SRCS:.cpp=.o)
 	$(CC) $(CC_FLAGS) -c -g $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME) -g
 
 
 all: $(NAME)

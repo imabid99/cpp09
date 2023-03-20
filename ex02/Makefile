@@ -1,11 +1,12 @@
-NAME = MutantStack
+NAME = PmergeMe
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INL = MutantStack.hpp
+INL = PmergeMe.hpp
 
 SRCS = main.cpp \
+		PmergeMe.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
