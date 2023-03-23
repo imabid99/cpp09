@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 13:43:50 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/20 19:24:50 by imabid           ###   ########.fr       */
+/*   Updated: 2023/03/23 21:45:21 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ bool my_Digit(std::string& str)
         if (!std::isdigit(*it))
             return false;
     }
-    return true;
+    return true ;
 }
 
 int main(int ac, char **av)
