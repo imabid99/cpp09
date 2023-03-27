@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 13:44:41 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/20 16:07:08 by imabid           ###   ########.fr       */
+/*   Updated: 2023/03/27 15:16:20 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,23 @@
 #include <algorithm>
 #include <stack>
 #include <vector>
+
+
+class PmergeMe
+{
+    private:
+        std::vector<int> vec;
+        std::deque<int> deq;
+    public:
+        PmergeMe();
+        ~PmergeMe();
+        PmergeMe(PmergeMe const & other);
+		PmergeMe& operator=(PmergeMe const & other);
+
+        void lets_sort(char **arg, int ac);
+        bool my_Digit(std::string& str);
+        void print();
+};
 
 
 
