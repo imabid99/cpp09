@@ -29,7 +29,6 @@ bool PmergeMe::my_Digit(std::string& str)
             ++it;
     for (; it != end; ++it)
     {
-        // std::cout << *it << std::endl;
         if (!std::isdigit(*it))
             return false;
     }
