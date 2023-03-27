@@ -53,27 +53,31 @@ void    PmergeMe::lets_sort(char **av,int ac)
         if(nbr < 0)
             throw "Error";                            
         vec.push_back(nbr);
+        deq.push_back(nbr);
     }
     std::cout << "Before :";
-    print();
+    print(vec);
+    // print(deq);
     // std::sort(vec.begin(), vec.end());
     // std::cout << vec.size() << std::endl;
     // for(std::vector<int>::size_type i=0; i < vec.size(); i++)
     //     std::cout << vec.at(i) << ' ';
 }
 
-void	PmergeMe::print()
+template <typename Container>
+void PmergeMe::print(Container& c)
 {
-	int i = 0;
-	for (std::vector<int>::iterator it = vec.begin(); it < vec.end(); it++)
-	{
-		if(i > 6)
-		{
-			std::cout << " [...]";
-			break;
-		}
-		std::cout << " " << *it;
+    int i = 0;
+    typename Container::iterator it;
+    for (it = c.begin(); it != c.end(); it++)
+    {
+        if (i > 6)
+        {
+            std::cout << " [...]";
+            break;
+        }
+        std::cout << " " << *it;
         i++;
-	}
-	std::cout << std::endl;
+    }
+    std::cout << std::endl;
 }
