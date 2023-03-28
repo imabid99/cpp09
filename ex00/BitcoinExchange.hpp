@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 11:23:39 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/19 19:31:18 by imabid           ###   ########.fr       */
+/*   Updated: 2023/03/27 14:43:20 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,20 @@
 class  BitcoinExchange
 {
 	private:
-		int _value;
+		std::map<std::string, float> adata;
 	public:
 		 BitcoinExchange();
 		 BitcoinExchange( BitcoinExchange const & src);
 		 BitcoinExchange&		operator=(  BitcoinExchange const & rhs);
 		~BitcoinExchange();
-		void    	store_data(std::string fdata, std::map<std::string, float>& adata);
+		// void    	store_data(std::string fdata, std::map<std::string, float>& adata);
+		void    	store_data(std::string fdata);
 		std::string lets_Trim(const std::string& str);
 		bool 		my_Digit(std::string& str);
 		int     	check_date(int year, int month, int day);
 		int     	check_btc(std::string str);
 		float   	btc_calcul(std::string key,std::map<std::string, float>& adata, std::string btc_n);
-		void    	all_Process(std::ifstream& file, std::map<std::string, float>& adata);
+		void    	all_Process(std::ifstream& file);
 };
 
 #endif
