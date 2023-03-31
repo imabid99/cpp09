@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 15:38:27 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/27 14:27:57 by imabid           ###   ########.fr       */
+/*   Updated: 2023/03/31 01:16:32 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,6 @@ class  Rpn
 		Rpn& operator=(Rpn const & other);
 		
 		void	all(char *av);
-		
-	// private:
-	// 	int _value;
-	// public:
-	// 	 BitcoinExchange();
-	// 	 BitcoinExchange( BitcoinExchange const & src);
-	// 	 BitcoinExchange&		operator=(  BitcoinExchange const & rhs);
-	// 	~BitcoinExchange();
-	// 	void    	store_data(std::string fdata, std::map<std::string, float> adata);
-	// 	std::string lets_Trim(const std::string& str);
-	// 	bool 		my_Digit(std::string& str);
-	// 	int     	check_date(int year, int month, int day);
-	// 	int     	check_btc(std::string str);
-	// 	float   	btc_calcul(std::string key, std::map<std::string, float> adata, std::string btc_n);
-	// 	void    	all_Process(std::ifstream& file, std::map<std::string, float>& adata);
 };
 
 #endif
