@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 11:23:33 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/19 19:19:52 by imabid           ###   ########.fr       */
+/*   Updated: 2023/03/27 14:41:28 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ int main(int argc, char* argv[])
         return 1;
     }
     std::string fdata = "data.csv";
-    std::map<std::string, float> adata;
-    btc.store_data(fdata, adata);
-    btc.all_Process(file, adata);
+    // std::map<std::string, float> adata;
+    // btc.store_data(fdata, adata);
+    // btc.all_Process(file, adata);
+    btc.store_data(fdata);
+    btc.all_Process(file);
 
     return 0;
 }

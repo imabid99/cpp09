@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 11:23:48 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/20 19:19:37 by imabid           ###   ########.fr       */
+/*   Updated: 2023/03/27 14:43:43 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,7 @@ BitcoinExchange::~BitcoinExchange()
 
  BitcoinExchange &				 BitcoinExchange::operator=(  BitcoinExchange const & rhs )
 {
-	if ( this != &rhs )
-	{
-		this->_value = rhs._value;
-	}
+    this->adata = rhs.adata;
 	return *this;
 }
 
@@ -96,7 +93,7 @@ int     BitcoinExchange::check_btc(std::string str)
     return 1;
 }
 
-void    BitcoinExchange::store_data(std::string fdata, std::map<std::string, float>& adata)
+void    BitcoinExchange::store_data(std::string fdata)
 {
     std::ifstream   f(fdata);
     std::string     line;
@@ -141,7 +138,7 @@ float     BitcoinExchange::btc_calcul(std::string key, std::map<std::string, flo
     return 1;
 }
 
-void    BitcoinExchange::all_Process(std::ifstream& file, std::map<std::string, float>& adata)
+void    BitcoinExchange::all_Process(std::ifstream& file)
 {
     std::string     line, key, value, datakey, dataval, firstline;
 

@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 15:38:27 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/19 15:40:50 by imabid           ###   ########.fr       */
+/*   Updated: 2023/03/27 14:27:57 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@
 
 class  Rpn
 {
+	private:
+    	std::stack<int> stk;
+	public:
+		Rpn();
+	    ~Rpn();
+		Rpn(Rpn const & other);
+		Rpn& operator=(Rpn const & other);
+		
+		void	all(char *av);
+		
 	// private:
 	// 	int _value;
 	// public:
