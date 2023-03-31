@@ -86,7 +86,9 @@ void    PmergeMe::lets_sort(char **av,int ac)
     }
     std::cout << "Before :";
     merge_sort(vec,vec.begin(),vec.end());
+    merge_sort(deq,deq.begin(),deq.end());
     print(vec);
+    print(deq);
     // print(deq);
     // std::sort(vec.begin(), vec.end());
     // std::cout << vec.size() << std::endl;
