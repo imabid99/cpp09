@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 11:23:39 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/27 14:43:20 by imabid           ###   ########.fr       */
+/*   Updated: 2023/04/01 15:42:31 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ class  BitcoinExchange
 		 BitcoinExchange( BitcoinExchange const & src);
 		 BitcoinExchange&		operator=(  BitcoinExchange const & rhs);
 		~BitcoinExchange();
-		// void    	store_data(std::string fdata, std::map<std::string, float>& adata);
 		void    	store_data(std::string fdata);
 		std::string lets_Trim(const std::string& str);
 		bool 		my_Digit(std::string& str);
