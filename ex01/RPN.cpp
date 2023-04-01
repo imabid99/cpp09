@@ -21,7 +21,7 @@ void Rpn::all(char *av)
 {
     std::stringstream s(av);
     std::string arg;
-    
+
     while (getline(s, arg, ' '))
     {
         std::stringstream value;

@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 11:23:48 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/27 14:43:43 by imabid           ###   ########.fr       */
+/*   Updated: 2023/04/01 16:01:52 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,6 @@ float     BitcoinExchange::btc_calcul(std::string key, std::map<std::string, flo
     }
     else
     {
-        
         it = adata.lower_bound(key);
         if(adata.begin() != it)
             it--;
@@ -150,7 +149,7 @@ void    BitcoinExchange::all_Process(std::ifstream& file)
     }
     while (std::getline(file, line)) 
     {
-        int                 pos;
+        int      pos;
         
         pos = line.find('|');
         key = line.substr(0, pos);
