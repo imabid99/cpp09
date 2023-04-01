@@ -80,8 +80,7 @@ void merge_sort(container &mycont, Iter first, Iter last)
     else
     {
         insertionSort(mycont);
-    }
-    
+    } 
 }
 
 void    PmergeMe::lets_sort(char **av,int ac)
