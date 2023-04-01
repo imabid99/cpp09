@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 13:44:41 by imabid            #+#    #+#             */
-/*   Updated: 2023/03/31 16:09:08 by imabid           ###   ########.fr       */
+/*   Updated: 2023/04/01 00:04:49 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,6 @@ class PmergeMe
 
         void lets_sort(char **arg, int ac);
         bool my_Digit(std::string& str);
-        // void print();
-        template <typename Container>
-        void print(Container& c);
 };
 
 

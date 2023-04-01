@@ -35,6 +35,24 @@ bool PmergeMe::my_Digit(std::string& str)
     return true ;
 }
 
+template <typename Container>
+void print(Container& c)
+{
+    int i = 0;
+    typename Container::iterator it;
+    for (it = c.begin(); it != c.end(); it++)
+    {
+        // if (i > 6)
+        // {
+        //     std::cout << " [...]";
+        //     break;
+        // }
+        std::cout << " " << *it;
+        i++;
+    }
+    std::cout << std::endl;
+}
+
 template< typename container>
 void insertionSort(container &mycnt) {
     int size = mycnt.size();
@@ -74,7 +92,6 @@ void    PmergeMe::lets_sort(char **av,int ac)
     for(int i = 1; i < ac; i++)
     {
         std::string arg = av[i];
-        // std::cout << "hwll" << std::endl;
         if(!my_Digit(arg))
             throw "Error";
         std::stringstream N;
@@ -98,35 +115,8 @@ void    PmergeMe::lets_sort(char **av,int ac)
     merge_sort(deq,deq.begin(),deq.end());
     last = clock();
     tdeq = static_cast<double>(last - first) / CLOCKS_PER_SEC * 1000;
-    // print(deq);
     std::cout << "After:";
-    // merge_sort(deq,deq.begin(),deq.end());
     print(vec);
     std::cout << "Time to process a range of " << vec.size() << " elements with std::vector : " << tvec << " ms" << std::endl;
     std::cout << "Time to process a range of " << deq.size() << " elements with std::deque : " << tdeq << " ms" << std::endl;
-
-    // print(deq);
-    // print(deq);
-    // std::sort(vec.begin(), vec.end());
-    // std::cout << vec.size() << std::endl;
-    // for(std::vector<int>::size_type i=0; i < vec.size(); i++)
-    //     std::cout << vec.at(i) << ' ';
-}
-
-template <typename Container>
-void PmergeMe::print(Container& c)
-{
-    int i = 0;
-    typename Container::iterator it;
-    for (it = c.begin(); it != c.end(); it++)
-    {
-        // if (i > 6)
-        // {
-        //     std::cout << " [...]";
-        //     break;
-        // }
-        std::cout << " " << *it;
-        i++;
-    }
-    std::cout << std::endl;
 }
