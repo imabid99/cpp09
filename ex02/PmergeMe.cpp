@@ -53,34 +53,41 @@ void print(Container& c)
     std::cout << std::endl;
 }
 
-template< typename container>
-void insertionSort(container &mycnt) {
+template<typename container>
+void insertionSort(container &mycnt) 
+{
     int size = mycnt.size();
-  for (int step = 1; step < size; step++) {
-    int key = mycnt[step];
-    int j = step - 1;
-
-    while (j >= 0 && key < mycnt[j]) {
-      mycnt[j + 1] = mycnt[j];
-      --j;
+    int i = 1;
+    while (i < size)
+    {
+        int j = i;
+        while (j > 0 && mycnt[j] < mycnt[j - 1])
+        {
+            std::swap(mycnt[j], mycnt[j - 1]);
+            j--;
+        }
+        i++;
     }
-    mycnt[j + 1] = key;
-  }
 }
 
 template< typename container, class Iter>
 void merge_sort(container &mycont, Iter first, Iter last)
 {
-    if (last - first > 10) {
+    if(last - first <= 10)
+    {
+        container is;
+        for(Iter it = first; it != last; ++it)
+            is.push_back(*it);
+        insertionSort(is);
+        std::copy(is.begin(), is.end(), first);
+    }
+    else
+    {
         Iter middle = first + (last - first) / 2;
         merge_sort(mycont, first, middle);
         merge_sort(mycont, middle, last);
         std::inplace_merge(first, middle, last);
     }
-    else
-    {
-        insertionSort(mycont);
-    } 
 }
 
 void    PmergeMe::lets_sort(char **av,int ac)
