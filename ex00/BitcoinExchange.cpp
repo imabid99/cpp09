@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 11:23:48 by imabid            #+#    #+#             */
-/*   Updated: 2023/04/01 16:01:52 by imabid           ###   ########.fr       */
+/*   Updated: 2023/04/04 08:11:18 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 {
 }
 
- BitcoinExchange::BitcoinExchange( const  BitcoinExchange & src )
+ BitcoinExchange::BitcoinExchange(const  BitcoinExchange & src)
 {
     *this = src;
 }
@@ -25,7 +25,7 @@ BitcoinExchange::~BitcoinExchange()
 {
 }
 
- BitcoinExchange &				 BitcoinExchange::operator=(  BitcoinExchange const & rhs )
+ BitcoinExchange &	BitcoinExchange::operator=(BitcoinExchange const & rhs)
 {
     this->adata = rhs.adata;
 	return *this;
@@ -142,11 +142,8 @@ void    BitcoinExchange::all_Process(std::ifstream& file)
     std::string     line, key, value, datakey, dataval, firstline;
 
     std::getline(file, firstline);
-    if (firstline.substr(0, 6) == "date | value")
-    {
-        std::cout << "Error in first line : " << firstline << "\n";
-        std::getline(file, firstline);
-    }
+    if (firstline != "date | value")
+        std::cout << "Error in first line : " << firstline << std::endl;
     while (std::getline(file, line)) 
     {
         int      pos;
