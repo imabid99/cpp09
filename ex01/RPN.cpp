@@ -19,18 +19,21 @@ Rpn& Rpn::operator=(Rpn const & other)
 
 void Rpn::all(char *av)
 {
-    std::stringstream s(av);
-    std::string arg;
-
-    while (getline(s, arg, ' '))
+    int i = 0;
+    while (av[i])
     {
+        if (av[i] == ' ')
+        {
+            i++;
+            continue;
+        }
         std::stringstream value;
         int               v;
-        if(isdigit(arg[0]))
+        if(isdigit(av[i]))
         {
-            value << arg;
+            value << av[i];
             value >> v;
-            
+            std::cout << "this is v " << v << std::endl; 
             if(v < 10 || v > 0)
                 stk.push(v);
             else
@@ -45,7 +48,7 @@ void Rpn::all(char *av)
             int last = stk.top();
             stk.pop();
             int r;
-            switch (arg[0])
+            switch (av[i])
             {
             case '+':
                 r = last + first;
@@ -57,6 +60,8 @@ void Rpn::all(char *av)
                 r = last * first;
                 break;
             case '/':
+                if (first == 0)
+                    throw "Error";
                 r = last / first;
                 break;
             default:
@@ -67,6 +72,7 @@ void Rpn::all(char *av)
             else
                 throw "Error";
         }
+        i++;
     }
     if(stk.size() == 1)
         std::cout << stk.top() << std::endl;
